@@ -1485,6 +1485,10 @@ html {
   bottom: 20px;
   cursor: pointer;
 }
+.slider-hidden #slider {
+  opacity: 0;
+  touch-action: none;
+}
 #slider .visible {
   height: 6px;
   width: 100%;
@@ -3435,6 +3439,9 @@ ul.chapters.shareList a.level0 .svg-icon {
   padding: 0 0 20px 0.5em;
   white-space: nowrap;
 }
+.slider-hidden #helpView .interface .slider {
+  display: none !important;
+}
 #helpView .interface .slider span {
   position: relative;
 }
@@ -3946,6 +3953,9 @@ ul.chapters .right .puce.noshadow {
 #flip3dcontainer canvas {
   position: relative;
   left: 0;
+}
+.perftest #flip3dcontainer {
+  visibility: hidden !important;
 }
 .ios #pages {
   transform: translateZ(1);
@@ -6187,10 +6197,17 @@ a[data-cart-ref].overlay div.remove:hover svg:last-child {
   display: none;
 }
 a[data-cart-ref].overlay.displayArea:hover {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 191, 240, 0.3);
   mix-blend-mode: multiply;
 }
 a[data-cart-ref].overlay.displayArea:hover div {
+  display: inline-block;
+}
+.linksanimationlayer-under a[data-cart-ref].overlay:hover {
+  opacity: 0;
+  mix-blend-mode: multiply;
+}
+.linksanimationlayer-under a[data-cart-ref].overlay:hover div {
   display: inline-block;
 }
 audio::-webkit-media-controls-enclosure {
